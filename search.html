@@ -1,128 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container" style="padding:50px 250px;">
-      <h1>Search</h1>
-      <div id="header"></div>
-      <form role="form">
-        <div class="form-group">
-          <input
-            type="input"
-            class="form-control input-lg"
-            id="txt-search"
-            placeholder="Type your search activities"
-          />
-        </div>
-      </form>
-      <div id="filter-records"></div>
-      <div id="footer"></div>
+        <h1>Search</h1>
+        <div id="header"></div>
+        <form role="form">
+            <div class="form-group">
+                <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search activities" />
+            </div>
+        </form>
+        <div id="filter-records"></div>
+        <div id="footer"></div>
     </div>
-  </body>
+</body>
+
 </html>
 <script type="text/javascript">
-  function checkFilter(val, regex) {
-    let breaker = -1;
-    for (let i = 0; i < val.length; i++) {
-      if (val[i].search(regex) != -1) {
-        console.log(val[i]);
-        breaker = 1;
-        break;
-      }
+    function checkFilter(val, regex) {
+        let breaker = -1;
+        for (let i = 0; i < val.length; i++) {
+            if (val[i].search(regex) != -1) {
+                console.log(val[i]);
+                breaker = 1;
+                break;
+            }
+        }
+        return breaker;
     }
-    return breaker;
-  }
 
-  $(document).ready(function() {
-    var data = [
-      {
-        location_id: "1",
-        location_name: "CCSAI",
-        location_type: "Health and Wellness",
-        location_description: "61",
-        location_redirecturl: "default_profile.png",
-        location_filters: ["play", "gym", "lunch"]
-      },
-      {
-        location_id: "2",
-        location_name: "Library",
-        location_type: "Academic",
-        location_description: "61",
-        location_redirecturl: "default_profile.png",
-        location_filters: ["books", "printing"]
-      }
-    ];
+    $(document).ready(function() {
+        var data = [{
+            location_id: "1",
+            location_name: "CCSAI",
+            location_type: "Health and Wellness",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["play", "gym", "lunch"]
+        }, {
+            location_id: "2",
+            location_name: "Library",
+            location_type: "Academic",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["books", "printing"]
+        }];
 
-    var outputInit = '<div class="row">';
-    var countInit = 1;
-    $.each(data, function(key, val) {
-      outputInit += '<div class="col-md-6 well">';
-      outputInit += '<div class="col-md-7">';
-      outputInit += "<h5>" + val.location_name + "</h5>";
-      outputInit += "</div>";
-      outputInit += "</div>";
-      if (countInit % 2 == 0) {
-        outputInit += '</div><div class="row">';
-      }
-      countInit++;
-    });
-
-    outputInit += "</div>";
-    $("#filter-records").html(outputInit);
-
-    $("#txt-search").keyup(function() {
-      var searchField = $(this).val();
-      if (searchField === "") {
         var outputInit = '<div class="row">';
         var countInit = 1;
-
         $.each(data, function(key, val) {
-          outputInit += '<div class="col-md-6 well">';
-          outputInit += '<div class="col-md-7">';
-          outputInit += "<h5>" + val.location_name + "</h5>";
-          outputInit += "</div>";
-          outputInit += "</div>";
-          if (countInit % 2 == 0) {
-            outputInit += '</div><div class="row">';
-          }
-          countInit++;
+            outputInit += '<div class="col-md-6 well">';
+            outputInit += '<div class="col-md-7">';
+            outputInit += "<h5>" + val.location_name + "</h5>";
+            outputInit += "</div>";
+            outputInit += "</div>";
+            if (countInit % 2 == 0) {
+                outputInit += '</div><div class="row">';
+            }
+            countInit++;
         });
+
         outputInit += "</div>";
         $("#filter-records").html(outputInit);
-        return;
-      }
 
-      var regex = new RegExp(searchField, "i");
-      var output = '<div class="row">';
-      var count = 1;
+        $("#txt-search").keyup(function() {
+            var searchField = $(this).val();
+            if (searchField === "") {
+                var outputInit = '<div class="row">';
+                var countInit = 1;
 
-      $.each(data, function(key, val) {
-        console.log(checkFilter(val.location_filters, regex));
-        if (
-          val.location_name.search(regex) != -1 ||
-          checkFilter(val.location_filters, regex) != -1
-        ) {
-          output += '<div class="col-md-6 well">';
-          output += '<div class="col-md-7">';
-          output += "<h5>" + val.location_name + "</h5>";
-          output += "</div>";
-          output += "</div>";
-          if (count % 2 == 0) {
-            output += '</div><div class="row">';
-          }
-          count++;
-        }
-      });
-      output += "</div>";
-      $("#filter-records").html(output);
+                $.each(data, function(key, val) {
+                    outputInit += '<div class="col-md-6 well">';
+                    outputInit += '<div class="col-md-7">';
+                    outputInit += "<h5>" + val.location_name + "</h5>";
+                    outputInit += "</div>";
+                    outputInit += "</div>";
+                    if (countInit % 2 == 0) {
+                        outputInit += '</div><div class="row">';
+                    }
+                    countInit++;
+                });
+                outputInit += "</div>";
+                $("#filter-records").html(outputInit);
+                return;
+            }
+
+            var regex = new RegExp(searchField, "i");
+            var output = '<div class="row">';
+            var count = 1;
+
+            $.each(data, function(key, val) {
+                console.log(checkFilter(val.location_filters, regex));
+                if (
+                    val.location_name.search(regex) != -1 ||
+                    checkFilter(val.location_filters, regex) != -1
+                ) {
+                    output += '<div class="col-md-6 well">';
+                    output += '<div class="col-md-7">';
+                    output += "<h5>" + val.location_name + "</h5>";
+                    output += "</div>";
+                    output += "</div>";
+                    if (count % 2 == 0) {
+                        output += '</div><div class="row">';
+                    }
+                    count++;
+                }
+            });
+            output += "</div>";
+            $("#filter-records").html(output);
+        });
     });
-  });
 </script>
