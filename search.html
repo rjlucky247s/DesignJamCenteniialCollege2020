@@ -110,11 +110,14 @@
           val.location_name.search(regex) != -1 ||
           checkFilter(val.location_filters, regex) != -1
         ) {
-          output += '<div class="col-md-6 well">';
-          output += '<div class="col-md-7">';
-          output += "<h5>" + val.location_name + "</h5>";
+          // output += '<div class="row ccurricular">';
+          output += '<div class="col">';
+          output += '<i class="fas fa - map - marker - alt"></i><br />';
+          output += '<a href="">' + val.location_name + "</a>";
+          output +=
+            '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
           output += "</div>";
-          output += "</div>";
+          // output += "</div>";
           if (count % 2 == 0) {
             output += '</div><div class="row">';
           }

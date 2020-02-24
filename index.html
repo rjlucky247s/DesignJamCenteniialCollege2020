@@ -179,7 +179,7 @@
               </button>
                 </form>
 
-                <div id="filter-records"></div>
+               
                 <div id="footer"></div>
 
                 </nav>
@@ -216,6 +216,50 @@
                     </div>
                     <div class="col">
                         <div class="row ccurricular">
+                            <!-- <div class="col">
+                                <i class="fas fa-map-marker-alt"></i><br />
+                                <a href="">Lorem Ipson</a>
+                                <div class="smsquare">
+                                    <span class="s1"></span>
+                                    <span class="s2"></span>
+                                    <span class="s3"></span>
+                                    <span class="s4"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-map-marker-alt"></i><br />
+                                <a href="">Lorem Ipson</a>
+                                <div class="smsquare">
+                                    <span class="s1"></span>
+                                    <span class="s2"></span>
+                                    <span class="s3"></span>
+                                    <span class="s4"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-map-marker-alt"></i><br />
+                                <a href="">Lorem Ipson</a>
+                                <div class="smsquare">
+                                    <span class="s1"></span>
+                                    <span class="s2"></span>
+                                    <span class="s3"></span>
+                                    <span class="s4"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-map-marker-alt"></i><br />
+                                <a href="">Lorem Ipson</a>
+                                <div class="smsquare">
+                                    <span class="s1"></span>
+                                    <span class="s2"></span>
+                                    <span class="s3"></span>
+                                    <span class="s4"></span>
+                                </div>
+                            </div> -->
+                            <div class="row ccurricular"  id="filter-records"></div>
+                        </div>
+
+                        <!-- <div class="row ccurricular">
                             <div class="col">
                                 <i class="fas fa-map-marker-alt"></i><br />
                                 <a href="">Lorem Ipson</a>
@@ -385,50 +429,7 @@
                                     <span class="s4"></span>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row ccurricular">
-                            <div class="col">
-                                <i class="fas fa-map-marker-alt"></i><br />
-                                <a href="">Lorem Ipson</a>
-                                <div class="smsquare">
-                                    <span class="s1"></span>
-                                    <span class="s2"></span>
-                                    <span class="s3"></span>
-                                    <span class="s4"></span>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <i class="fas fa-map-marker-alt"></i><br />
-                                <a href="">Lorem Ipson</a>
-                                <div class="smsquare">
-                                    <span class="s1"></span>
-                                    <span class="s2"></span>
-                                    <span class="s3"></span>
-                                    <span class="s4"></span>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <i class="fas fa-map-marker-alt"></i><br />
-                                <a href="">Lorem Ipson</a>
-                                <div class="smsquare">
-                                    <span class="s1"></span>
-                                    <span class="s2"></span>
-                                    <span class="s3"></span>
-                                    <span class="s4"></span>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <i class="fas fa-map-marker-alt"></i><br />
-                                <a href="">Lorem Ipson</a>
-                                <div class="smsquare">
-                                    <span class="s1"></span>
-                                    <span class="s2"></span>
-                                    <span class="s3"></span>
-                                    <span class="s4"></span>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
         </div>
@@ -511,19 +512,53 @@
                     location_description: "61",
                     location_redirecturl: "default_profile.png",
                     location_filters: ["books", "printing"]
-                }];
+                }, {
+                        location_id: "2",
+                        location_name: "Library",
+                        location_type: "Academic",
+                        location_description: "61",
+                        location_redirecturl: "default_profile.png",
+                        location_filters: ["books", "printing"]
+                    },
+                    {
+                        location_id: "2",
+                        location_name: "Library",
+                        location_type: "Academic",
+                        location_description: "61",
+                        location_redirecturl: "default_profile.png",
+                        location_filters: ["books", "printing"]
+                    },
+                    {
+                        location_id: "2",
+                        location_name: "Library",
+                        location_type: "Academic",
+                        location_description: "61",
+                        location_redirecturl: "default_profile.png",
+                        location_filters: ["books", "printing"]
+                    },
+                    {
+                        location_id: "2",
+                        location_name: "Library",
+                        location_type: "Academic",
+                        location_description: "61",
+                        location_redirecturl: "default_profile.png",
+                        location_filters: ["books", "printing"]
+                    }];
 
-                var outputInit = '<div class="row">';
+                var outputInit = '';
                 var countInit = 1;
                 $.each(data, function(key, val) {
-                    outputInit += '<div class="col-md-6 well">';
-                    outputInit += '<div class="col-md-7">';
-                    outputInit += "<h5>" + val.location_name + "</h5>";
+                 // outputInit += '<div class="row ccurricular">';
+                    outputInit += '<div class="col">';
+                    outputInit += '<i class="fas fa-map-marker-alt"></i><br />';
+                    outputInit += '<a href="">' + val.location_name + "</a>";
+                    outputInit +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
                     outputInit += "</div>";
-                    outputInit += "</div>";
-                    if (countInit % 2 == 0) {
-                        outputInit += '</div><div class="row">';
-                    }
+                 //   outputInit += "</div>";
+                    // if (countInit % 2 == 0) {
+                    //     outputInit += '</div><div class="row">';
+                    // }
                     countInit++;
                 });
                 outputInit += "</div>";
@@ -536,11 +571,14 @@
                         var countInit = 1;
 
                         $.each(data, function(key, val) {
-                            outputInit += '<div class="col-md-6 well">';
-                            outputInit += '<div class="col-md-7">';
-                            outputInit += "<h5>" + val.location_name + "</h5>";
+                         //  outputInit += '<div class="row ccurricular">';
+                            outputInit += '<div class="col">';
+                            outputInit += '<i class="fas fa-map-marker-alt"></i><br />';
+                            outputInit += '<a href="">' + val.location_name + "</a>";
+                            outputInit +=
+                                '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
                             outputInit += "</div>";
-                            outputInit += "</div>";
+                         //   outputInit += "</div>";
                             if (countInit % 2 == 0) {
                                 outputInit += '</div><div class="row">';
                             }
@@ -562,11 +600,14 @@
                     }
                     $.each(data, function(key, val) {
                         if (val.location_name.search(regex) != -1) {
-                            output += '<div class="col-md-6 well">';
-                            output += '<div class="col-md-7">';
-                            output += "<h5>" + val.location_name + "</h5>";
+                           //output += '<div class="row ccurricular">';
+                            output += '<div class="col">';
+                            output += '<i class="fas fa-map-marker-alt"></i><br />';
+                            output += '<a href="">' + val.location_name + "</a>";
+                            output +=
+                                '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
                             output += "</div>";
-                            output += "</div>";
+                           // output += "</div>";
                             if (count % 2 == 0) {
                                 output += '</div><div class="row">';
                             }
