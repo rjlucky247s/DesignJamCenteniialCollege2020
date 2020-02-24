@@ -191,27 +191,27 @@
                         </div>
                         <div class="row title-service">
                             <div class="col-1 asc"><input type="checkbox" /></div>
-                            <div class="col as">Academic Suport</div>
+                            <div class="col as" onclick="OnLocationTypeClicked('Academic support',this)">Academic Support</div>
                         </div>
                         <div class="row title-service">
                             <div class="col-1 fs"><input type="checkbox" /></div>
-                            <div class="col as">Financial Suport</div>
+                            <div class="col as" onclick="OnLocationTypeClicked('Financial support',this)">Financial Support</div>
                         </div>
                         <div class="row title-service">
                             <div class="col-1 gi"><input type="checkbox" /></div>
-                            <div class="col as">Get Involved</div>
+                            <div class="col as" onclick="OnLocationTypeClicked('Get involved',this)">Get Involved</div>
                         </div>
                         <div class="row title-service">
                             <div class="col-1 hw"><input type="checkbox" /></div>
-                            <div class="col as">Health and Wellness</div>
+                            <div class="col as" onclick="OnLocationTypeClicked('Health and Wellness',this)">Health and Wellness</div>
                         </div>
                         <div class="row title-service">
                             <div class="col-1 prof"><input type="checkbox" /></div>
-                            <div class="col as">Professional</div>
+                            <div class="col as" onclick="OnLocationTypeClicked('Professional',this)">Professional</div>
                         </div>
                         <div class="row title-service">
                             <div class="col-1 ss"><input type="checkbox" /></div>
-                            <div class="col as">Student space</div>
+                            <div class="col as" onclick="OnLocationTypeClicked('Student space',this)">Student space</div>
                         </div>
                     </div>
                     <div class="col">
@@ -452,8 +452,8 @@
                     </div>
                     <div class="col">
                         <ul>
-                            <li><a href="">Academic Suport</a></li>
-                            <li><a href="">Financial Suport</a></li>
+                            <li><a href="">Academic Support</a></li>
+                            <li><a href="">Financial Support</a></li>
                             <li><a href="">Get Involved</a></li>
                             <li><a href="">Health and Wellness</a></li>
                             <li><a href="">Professional</a></li>
@@ -497,8 +497,7 @@
         <script src="assets/js/functions.js"></script>
 
         <script type="text/javascript">
-            $(document).ready(function() {
-                var data = [{
+            var data = [{
                     location_id: "1",
                     location_name: "CCSAI",
                     location_type: "Health and Wellness",
@@ -508,43 +507,193 @@
                 }, {
                     location_id: "2",
                     location_name: "Library",
-                    location_type: "Academic",
+                    location_type: "Academic support",
                     location_description: "61",
                     location_redirecturl: "default_profile.png",
                     location_filters: ["books", "printing"]
                 }, {
-                        location_id: "2",
-                        location_name: "Library",
-                        location_type: "Academic",
-                        location_description: "61",
-                        location_redirecturl: "default_profile.png",
-                        location_filters: ["books", "printing"]
-                    },
-                    {
-                        location_id: "2",
-                        location_name: "Library",
-                        location_type: "Academic",
-                        location_description: "61",
-                        location_redirecturl: "default_profile.png",
-                        location_filters: ["books", "printing"]
-                    },
-                    {
-                        location_id: "2",
-                        location_name: "Library",
-                        location_type: "Academic",
-                        location_description: "61",
-                        location_redirecturl: "default_profile.png",
-                        location_filters: ["books", "printing"]
-                    },
-                    {
-                        location_id: "2",
-                        location_name: "Library",
-                        location_type: "Academic",
-                        location_description: "61",
-                        location_redirecturl: "default_profile.png",
-                        location_filters: ["books", "printing"]
-                    }];
-
+                    location_id: "3",
+                    location_name: "Career services & Co-operative Education",
+                    location_type: "Professional",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["job", "resume"]
+                },
+                {
+                    location_id: "4",
+                    location_name: "IT Help Desk",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["account", "password"]
+                },
+                {
+                    location_id: "5",
+                    location_name: "Student Experience Office",
+                    location_type: "Get involved",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["learn", "community"]
+                },
+                {
+                    location_id: "6",
+                    location_name: "Center For Academic English",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["language", "math", "english"]
+                }, {
+                    location_id: "7",
+                    location_name: "Prayer Room",
+                    location_type: "Student space",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["spiritual"]
+                }, {
+                    location_id: "8",
+                    location_name: "Book Store",
+                    location_type: "Student space",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["books", "buy", "rent", "return"]
+                }, {
+                    location_id: "9",
+                    location_name: "Community Outreach Office",
+                    location_type: "Get involved",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["education"]
+                }, {
+                    location_id: "10",
+                    location_name: "Incusive Washrooms",
+                    location_type: "Student space",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["hygene"]
+                }, {
+                    location_id: "11",
+                    location_name: "Center For Accesible Learning and Counselling Services",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["language", "math", "english"]
+                }, {
+                    location_id: "12",
+                    location_name: "Appiled Research, Innovation and Entrepreneurship Services",
+                    location_type: "Professional",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["business", "start-up"]
+                }, {
+                    location_id: "13",
+                    location_name: "Centennial Advising and Pathways Services",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["education"]
+                }, {
+                    location_id: "14",
+                    location_name: "Life Safety and Security",
+                    location_type: "Health and wellness",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["parking"]
+                }, {
+                    location_id: "15",
+                    location_name: "Assessment Center",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["Test", "math", "english"]
+                }, {
+                    location_id: "16",
+                    location_name: "The HUB(Enrollment Services)",
+                    location_type: "Financial support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["fees"]
+                }, {
+                    location_id: "17",
+                    location_name: "International Education Center",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["admission"]
+                }, {
+                    location_id: "18",
+                    location_name: "Learning Services",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["education"]
+                }, {
+                    location_id: "19",
+                    location_name: "Math Center",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["math", "learn"]
+                }, {
+                    location_id: "20",
+                    location_name: "The Centre for Global Citizenship Education & Inclusion - GCEI",
+                    location_type: "Academic support",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["community"]
+                }, {
+                    location_id: "21",
+                    location_name: "Food Services Outlet",
+                    location_type: "Student space",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["lunch", "breakfast", "coffee"]
+                }, {
+                    location_id: "22",
+                    location_name: "Co-curriculur student Learnig and Development",
+                    location_type: "Get involved",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["education"]
+                }, {
+                    location_id: "23",
+                    location_name: "Alumni Engagement",
+                    location_type: "Get involved",
+                    location_description: "61",
+                    location_redirecturl: "default_profile.png",
+                    location_filters: ["community"]
+                }];
+            var activeType;    
+                
+                
+                function OnLocationTypeClicked(locationType,element) {
+                    let  outputForType = "";
+                    let countForType = 1;
+                    
+                    if(typeof activeType != "undefined")
+                        $(activeType).parent().removeClass('locationTypeSelected');
+                    $(element).parent().addClass('locationTypeSelected');
+                        $.each(data, function (key, val) {
+                            if (val.location_type == locationType) {
+                                //output += '<div class="row ccurricular">';
+                                outputForType += '<div class="col">';
+                                outputForType += '<i class="fas fa-map-marker-alt"></i><br />';
+                                outputForType += '<a href="">' + val.location_name + "</a>";
+                                outputForType +=
+                                    '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                                outputForType += "</div>";
+                                // output += "</div>";
+                                if (countForType % 2 == 0) {
+                                    outputForType += '</div><div class="row">';
+                                }
+                                countForType++;
+                            }
+                            outputForType += "</div>";
+                            $("#filter-records").html(outputForType);
+                        });
+                        activeType = element;
+                    }
+            $(document).ready(function() {
+                
                 var outputInit = '';
                 var countInit = 1;
                 $.each(data, function(key, val) {
@@ -593,13 +742,21 @@
                     var output = '<div class="row">';
                     var count = 1;
 
-                    function checkFilter(val, regex) {
-                        val.location_filters.forEach(element => {
-                            if (element.search(regex) != -1) return 1;
-                        });
+                   function checkFilter(val, regex) {
+                        let breaker = -1;
+                        for (let i = 0; i < val.length; i++) {
+                            if (val[i].search(regex) != -1) {
+                                console.log(val[i]);
+                                breaker = 1;
+                                break;
+                            }
+                        }
+                        return breaker;
                     }
+
+                    
                     $.each(data, function(key, val) {
-                        if (val.location_name.search(regex) != -1) {
+                        if (val.location_name.search(regex) != -1 || checkFilter(val.location_filters, regex) != -1) {
                            //output += '<div class="row ccurricular">';
                             output += '<div class="col">';
                             output += '<i class="fas fa-map-marker-alt"></i><br />';
