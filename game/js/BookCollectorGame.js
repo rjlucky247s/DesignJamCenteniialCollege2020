@@ -179,8 +179,9 @@ var render = function() {
 
     // Display game over message when timer finished
     if (finished === true) {
-        ctx.fillStyle = "#aed26a";
-        ctx.fillText("Game over!", 200, 220);
+        ctx.fillStyle = "#fff";
+        ctx.font = "104px Digital-7";
+        ctx.fillText("Game over!", 100, 250);
     }
 };
 
@@ -190,7 +191,7 @@ document.getElementById("myBtnn").addEventListener("click", function() {
 });
 
 // Timer Code Block
-var count = 5; // how many seconds the game lasts for - default 30
+var count = 80; // how many seconds the game lasts for - default 30
 var finished = false;
 var counter = function() {
     count = stopTimer ? count : count - 1; // countown by 1 every second
