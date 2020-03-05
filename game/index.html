@@ -1,0 +1,55 @@
+﻿<link rel="stylesheet" href="../assets/css/all.min.css" />
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+<link href="css/MapStyles.css" rel="stylesheet" type="text/css" />
+
+<section class="score-area">
+    <div class="titlegame">
+        <div class="row">
+            <div class="col">
+                <h1>Time</h1>
+            </div>
+            <div class="col">
+                <h1>Books Collected</h1>
+            </div>
+            <div class="col">
+                <h1>Best Score:</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span id="time"></span>
+            </div>
+            <div class="col">
+                <span id="score"></span>
+            </div>
+            <div class="col">
+                <span id="highscore"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-restart"><button id="myBtnn">Restart Game</button></div>
+</section>
+
+<div id="popup">
+    <div id="close">
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <h2 class="popup-title">Title</h2>
+    <p class="popup-message">This is a popup message</p>
+</div>
+<div class="info-game">
+    <p>
+        Collect as many books as you can to increase your score.
+    </p>
+    <p>
+        Collecting the books will tell you about Centennial College's co curricular activities and other services they offer across different campuses.
+    </p>
+    <h5>
+        Press:<br /> <span class="green">P</span> to pause</span><br /> <span class="green">O</span> to unpause.
+    </h5>
+</div>
+<div id="popup-underlayer"></div>
+<script src="js/BookCollectorGame.js"></script>

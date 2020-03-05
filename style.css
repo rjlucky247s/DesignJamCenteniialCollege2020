@@ -1,51 +1,64 @@
+@import url("./assets/css/_media.css");
+@font-face {
+    src: url("./assets/fonts/franklin-gothic/FranklinGothic.ttf");
+}
+
 *,
 body,
 html {
+    font-family: 'Franklin Gothic Medium', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
 /* Font Family */
 
-@font-face {
-    font-family: 'franklin';
-    src: url("./assets/fonts/franklin-gothic/FranklinGothic.ttf");
-}
-
 nav {
     box-shadow: 2px 3px 4px rgba(0, 0, 0, .2);
     width: 100%;
     padding: 0;
+}
+
+.navbar {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
     width: 100%;
 }
 
-.disablebtn {
-    border: none;
+.navbar-brand {
+    background: #464647;
+    margin-left: 10rem;
 }
 
-.navbar-brand {
-    padding-left: 1rem;
+.change-size-fonts li {
+    display: inline-grid;
+    align-items: center;
+}
+
+.change-size-fonts .md {
+    font-size: 1.5rem;
+}
+
+.change-size-fonts .bg {
+    font-size: 2rem;
 }
 
 .navbar-nav {
-    font-size: 1.2rem;
-    padding: 0 !important;
-    margin: 0 !important;
+    width: 100%;
 }
 
 .navbar-nav li {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     padding: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.2rem;
     border-right: .1px solid gainsboro;
     height: 100px;
-    width: auto;
     color: #454546;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
 }
 
 .navbar-nav li:last-child {
@@ -105,7 +118,7 @@ nav {
     position: relative;
     top: 1.5rem;
     font-size: 4rem;
-    color: #cc2200;
+    color: #D14124;
     z-index: 1;
 }
 
@@ -138,7 +151,7 @@ nav {
 
 .linkCampus:hover {
     background: #fff;
-    color: #010101 !important;
+    color: #454546 !important;
     transition: all .5s ease;
 }
 
@@ -150,7 +163,7 @@ nav {
     left: -4px;
     width: 8px;
     height: 8px;
-    background-color: #404040;
+    background-color: #454546;
     transform: rotate(45deg);
     z-index: -1;
 }
@@ -163,14 +176,14 @@ nav {
     right: 2px;
     width: 8px;
     height: 8px;
-    background-color: #404040;
+    background-color: #454546;
     transform: rotate(45deg);
     z-index: -1;
 }
 
 .curve {
-    position: absolute;
-    bottom: -406px;
+    position: relative;
+    top: 0;
     height: 200px;
     width: 100%;
     transform-origin: top;
@@ -182,19 +195,6 @@ nav {
 }
 
 
-/* Large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1300px) {
-    .curve {
-        position: absolute;
-        bottom: -127px;
-        height: 200px;
-        width: 100%;
-        transform-origin: top;
-    }
-}
-
-
 /*/////////CONTENT/////////*/
 
 
@@ -202,29 +202,43 @@ nav {
 
 section.infocontent {
     margin: 0;
-    padding-top: 10rem;
 }
 
 .title-m2 {
     text-align: center;
+    padding: 1rem;
 }
 
 .title-m2 h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    color: #404040;
+    color: #454546;
     font-size: 3rem;
 }
 
 .title-m2 h2 {
-    font-family: 'Montserrat';
-    color: #404040;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #454546;
     font-size: 2.4rem;
     font-weight: lighter;
 }
 
+.title-m2 h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #454546;
+    font-size: 2rem;
+}
+
+.title-m2 h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 3rem;
+}
+
 .title-m2 p {
-    font-family: 'Montserrat';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #404040;
     font-size: 1.4rem;
     font-weight: lighter;
@@ -244,7 +258,7 @@ section.infocontent p {
 
 .did-you-know {
     margin-top: 5rem;
-    background: #38383a;
+    background: #454546;
     color: #fff;
     padding: 5rem;
 }
@@ -263,7 +277,7 @@ section.infocontent p {
 
 .did-you-know a,
 .did-you-know span.green {
-    color: #cadf3d;
+    color: #D4DF38;
 }
 
 
@@ -282,19 +296,19 @@ section.co-curricular .cc-services {
 .title-dark h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    color: #010101;
+    color: #454546;
     font-size: 3rem;
 }
 
 .title-dark h2 {
-    font-family: 'Montserrat';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
     font-size: 2.4rem;
     font-weight: lighter;
 }
 
 .title-service {
-    color: #403f44;
+    color: #454546;
     text-align: center;
     background: #fff;
     margin: .1rem;
@@ -303,7 +317,7 @@ section.co-curricular .cc-services {
 
 .sl {
     font-weight: bold;
-    background: #869448;
+    background: #00B2A9;
     font-size: 1.5rem;
     padding: .5rem;
     color: #fff;
@@ -324,27 +338,27 @@ section.co-curricular .cc-services {
 }
 
 .asc {
-    background: #33221e;
+    background: #F2A900;
 }
 
 .fs {
-    background: #2d3c33;
+    background: #4698CB;
 }
 
 .gi {
-    background: #52221c;
+    background: #00B2A9;
 }
 
 .hw {
-    background: #733f1b;
+    background: #D14124;
 }
 
 .prof {
-    background: #201f23;
+    background: #503D6B;
 }
 
 .ss {
-    background: #2c313a;
+    background: #004C97;
 }
 
 .ccurricular {
@@ -360,17 +374,17 @@ section.co-curricular .cc-services {
 }
 
 .ccurricular i {
-    color: #403f44;
+    color: #454546;
     font-size: 4rem;
 }
 
 .ccurricular a {
-    color: #403f44;
+    color: #454546;
     font-size: 1.2rem;
 }
 
 .ccurricular a:hover {
-    color: #403f44;
+    color: #454546;
 }
 
 .ccurricular:hover i {
@@ -387,58 +401,60 @@ section.co-curricular .cc-services {
 }
 
 span.s1 {
-    background: #33221e;
+    background: #F2A900;
     width: 100%;
 }
 
 span.s2 {
-    background: #2d3c33;
+    background: #4698CB;
     width: 100%;
 }
 
 span.s3 {
-    background: #52221c;
+    background: #00B2A9;
     width: 100%;
 }
 
 span.s4 {
-    background: #733f1b;
+    background: #D14124;
     width: 100%;
 }
 
-section.footer {
+
+/*********************************/
+
+footer.footer-area {
     position: relative;
-    background: #1e1e1e;
+    background: #1E1E1E;
     padding: 2rem;
     margin: 0;
     color: #fff
 }
 
-section.footer ul {
+footer.footer-area ul {
     list-style-type: none;
 }
 
-section.footer ul li {
+footer.footer-area ul li {
     vertical-align: bottom;
 }
 
-section.footer ul li a {
+footer.footer-area ul li a {
     font-size: 1.1rem;
-    font-family: 'Montserrat';
     color: #fff;
 }
 
-section.footer hr {
-    border: 0.05rem solid #cadf3d;
+footer.footer-area hr {
+    border: 0.05rem solid #D4DF38;
 }
 
-section.footer .social-media {
+footer.footer-area .social-media {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-section.footer .circle {
+footer.footer-area .circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -455,23 +471,22 @@ section.footer .circle {
 
 section.downsview {
     padding-top: 1rem;
-    background: #aed26a;
+    background: #D4DF38;
 }
 
 .downsview-map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url("../images/downsview_map.png") no-repeat top center;
-    background-size: contain;
-    width: 100%;
-    height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 iframe {
+    position: relative;
     width: 100%;
-    height: 100%;
-    border: none;
+    height: 640px;
+    border: .5rem solid #464647;
+    border-radius: 1rem;
+    background: #464647 !important;
+    padding: 0;
 }
 
 .dv1 {

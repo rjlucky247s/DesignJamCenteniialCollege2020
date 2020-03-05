@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>KASHAWNSLAPTOP</Machine>
-    <WindowsUser>Kashawn W Flockavela</WindowsUser>
+    <Machine>DESKTOP-PHUGBKB</Machine>
+    <WindowsUser>Jay</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,40 +10,40 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>94cd66ac-67b8-4899-ad1e-185c6de3abbb</PackageIdentityName>
     <PackageIdentityPublisher>CN=Kashawn W Flockavela</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath></WindowsSdkPath>
-    <LayoutDir>C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bin\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bin\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\images\Book.png">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\images\Book.png">
       <PackagePath>images\Book.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\images\CampusMap.png">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\images\CampusMap.png">
       <PackagePath>images\CampusMap.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\images\Player.png">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\images\Player.png">
       <PackagePath>images\Player.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\index.html">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\index.html">
       <PackagePath>index.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\js\BookCollectorGame.js">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\js\BookCollectorGame.js">
       <PackagePath>js\BookCollectorGame.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\css\MapStyles.css">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\css\MapStyles.css">
       <PackagePath>css\MapStyles.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

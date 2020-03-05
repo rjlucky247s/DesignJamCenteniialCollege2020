@@ -36,6 +36,12 @@ var player = {
 };
 var book = {};
 var booksCaught = 0;
+var highscore = 0;
+
+// Check for saved data
+if (localStorage.getItem('highscore')) {
+    highscore = localStorage.getItem('highscore');
+}
 
 // Handle keyboard controls
 var keysDown = {};
@@ -59,19 +65,57 @@ var reset = function() {
     book.y = 32 + (Math.random() * (canvas.height - 64));
 };
 
+// Restart the whole game without refreshing the page
+var ResetGame = function() {
+
+    if (booksCaught > highscore) {
+        highscore = booksCaught;
+        localStorage.setItem('highscore', highscore);
+    }
+
+    player.x = canvas.width / 2;
+    player.y = canvas.height / 2;
+    player.speed = 256;
+
+    booksCaught = 0;
+    count = 30;
+    finished = false;
+    playerReady = true;
+    bookReady = true;
+
+    // Throw the book somewhere on the screen randomly
+    book.x = 32 + (Math.random() * (canvas.width - 64));
+    book.y = 32 + (Math.random() * (canvas.height - 64));
+};
+
 // Update game objects - change player position based on key pressed
 var update = function(modifier) {
-    if (38 in keysDown) { // Player is holding up key
+    if (38 in keysDown) { // Player holding up
         player.y -= player.speed * modifier;
+        if (player.y <= 0) {
+            player.y = 540;
+        }
     }
-    if (40 in keysDown) { // Player is holding down key
+
+    if (40 in keysDown) { // Player holding down
         player.y += player.speed * modifier;
+        if (player.y >= 540) {
+            player.y = 0;
+        }
     }
-    if (37 in keysDown) { // Player is holding left key
+
+    if (37 in keysDown) { // Player holding left
         player.x -= player.speed * modifier;
+        if (player.x <= 0) {
+            player.x = 540;
+        }
     }
-    if (39 in keysDown) { // Player is holding right key
+
+    if (39 in keysDown) { // Player holding right
         player.x += player.speed * modifier;
+        if (player.x >= 540) {
+            player.x = 0;
+        }
     }
 
     // Check if player and book collide
@@ -98,13 +142,19 @@ var render = function() {
         ctx.drawImage(bookImage, book.x, book.y);
     }
 
-    // Display score and time 
+    // Display current score and time 
     ctx.fillStyle = "rgb(250, 250, 250)";
-    ctx.font = "24px Book Antiqua";
     ctx.textAlign = "left";
     ctx.textBaseline = "top";
-    ctx.fillText("Books Collected: " + booksCaught, 20, 20);
-    ctx.fillText("Time: " + count, 20, 50);
+    ctx.fillText(booksCaught, 20, 20);
+    ctx.fillText(count, 20, 50);
+
+    // Display highscore
+    ctx.fillStyle = "rgb(250, 250, 250)";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.fillText(highscore, 375, 20);
+
 
     // Display game over message when timer finished
     if (finished === true) {
@@ -113,26 +163,16 @@ var render = function() {
 
 };
 
-//Reset The Score
-document.getElementById("myBtnn").addEventListener("click", function() {
-    document.getElementById("resetSc").innerHTML = booksCaught = 0;
-});
 
-//Reset The Timer
-document.getElementById("myBtnn").addEventListener("click", function() {
-    document.getElementById("resetTm").innerHTML = count = 30;
-});
+////Reset The Entire Game by refreshing the page
+//document.getElementById("myBtnn").addEventListener("click", function () {
+//    document.getElementById("resetGame").innerHTML = document.location.href = "";
+//});
 
 //Reset The Entire Game
 document.getElementById("myBtnn").addEventListener("click", function() {
-    document.getElementById("resetGm").innerHTML = reset();
+    document.getElementById("resetGame").innerHTML = ResetGame();
 });
-
-//Reset The Entire Game
-document.getElementById("myBtnn").addEventListener("click", function() {
-    document.getElementById("resetMa").innerHTML = main();
-});
-
 
 
 // Timer Code Block

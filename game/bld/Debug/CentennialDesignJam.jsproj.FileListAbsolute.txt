@@ -19,3 +19,24 @@ C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesig
 C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bld\Debug\qualifiers.txt.intermediate
 C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Simone\Documents\COLLEGE\DESIGN JAM\CentennialDesignJam\CentennialDesignJam\bld\Debug\ProjectArchitectures.txt
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bin\Debug\ReverseMap\resources.pri
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bin\Debug\AppxManifest.xml
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bin\Debug\CentennialDesignJam.build.appxrecipe
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\CentennialDesignJam.jsproj.CoreCompileInputs.cache
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\ResourceHandlingTask.state
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\priconfig.xml
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\priconfig.xml.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\unfiltered.layout.resfiles
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\filtered.layout.resfiles
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\filtered.layout.resfiles.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\excluded.layout.resfiles
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\excluded.layout.resfiles.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\resources.resfiles
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\resources.resfiles.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\pri.resfiles
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\pri.resfiles.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\qualifiers.txt
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Jay\Desktop\CentennialDesignJam\CentennialDesignJam\bld\Debug\ProjectArchitectures.txt
