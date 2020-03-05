@@ -3,40 +3,435 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centennial College | Community Colleges in Toronto, Canada</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/flexboxgrid.min.css" />
 </head>
 
 <body>
-    <div class="container" style="padding:50px 250px;">
-        <h1>Search</h1>
-        <div id="header"></div>
-        <form role="form">
-            <div class="form-group">
-                <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search activities" />
+    <nav class="navbar navbar-expand-sm navbar-light justify-content-end">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/images/centennial_college_logo.png" /></a>
+            <button class="disablebtn ml-auto mr-1"></button>
+            <button id="searchBtn"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="change-size-fonts">
+                <li class="sm">A</li>
+                <li class="md">A</li>
+                <li class="bg">A</li>
+            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-right">
+                    <li><i class="fas fa-search"></i></li>
+                    <li>Academic Support</li>
+                    <li>Financial Support</li>
+                    <li>Get Involved</li>
+                    <li>Health and Wellness</li>
+                    <li>Professional</li>
+                    <li>Student Space</li>
+                    <li><i class="fas fa-bars"></i></li>
+                </ul>
             </div>
-        </form>
-        <div id="filter-records"></div>
-        <div id="footer"></div>
+        </div>
+    </nav>
+
+    <section class="title-area">
+        <div class="title-m2">
+            <h1>EXPERIENCE CENTENNIAL</h1>
+            <p>
+                Find the services available to you at any college campus - Choose your campus
+            </p>
+        </div>
+    </section>
+
+    <section class="campus-area">
+        <div class="container-fluid allcampus">
+            <div class="campusbuildings">
+                <div class="row">
+                    <div class="col-xs">
+                        <div class="box c1">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <img src="assets/images/ashtonbee_campus-SM.png" />
+                            <br /><a href="campus.html" class="btn linkCampus">Ashtonbee</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs">
+                        <div class="box c1">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <img src="assets/images/downsview_campus-SM.png" />
+                            <br /><a href="campus.html" class="btn linkCampus">Downsview</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs">
+                        <div class="box c1">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <img src="assets/images/eglinton_campus-SM.png" />
+                            <br /><a href="campus.html" class="btn linkCampus">Eglinton</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs">
+                        <div class="box c1">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <img src="assets/images/morningside_campus-SM.png" />
+                            <br /><a href="campus.html" class="btn linkCampus">Morningside</a>
+                        </div>
+                    </div>
+                    <div class="col-xs">
+                        <div class="box c1">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <img src="assets/images/progress_campus-SM.png" />
+                            <br /><a href="campus.html" class="btn linkCampus">Progress</a>
+                        </div>
+                    </div>
+                    <div class="col-xs">
+                        <div class="box c1">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <img src="assets/images/story-arts-centre_campus-SM.png" />
+                            <br /><a href="campus.html" class="btn linkCampus">Story Arts Centre</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="curve"><img src="assets/images/curve.png" /></div>
+    <section class="infocontent">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="title-m2">
+                    <h1>HOW TO USE</h1>
+                    <h2>the service guide</h2>
+                </div>
+                <div class="info">
+                    <h3>Land Acknowledgement</h3>
+                    <p>
+                        Centennial College is proud to be a part of a rich history of
+                        education in this province and in this city. We acknowledge that
+                        we are on the treaty lands and territory of the Mississaugas of
+                        the Credit First Nation and pay tribute to their legacy and the
+                        legacy of all First Peoples of Canada, as we strengthen ties with
+                        the communities we serve and build the future through learning and
+                        through our graduates. Today the traditional meeting place of
+                        Toronto is still home to many Indigenous People from across Turtle
+                        Island and we are grateful to have the opportunity to work in the
+                        communities that have grown in the treaty lands of the
+                        Mississaugas. We acknowledge that we are all treaty people and
+                        accept our responsibility to honour all our relations.
+                    </p>
+                    <img src="assets/images/turtle.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid did-you-know">
+        <div class="container">
+            <div class="title-m2">
+                <h4>Did You Know?</h4>
+            </div>
+            <p>
+                When you come to Centennial, you join a community of learners, faculty and staff who work together
+                regardless of backgrounds, beliefs and ethnicities. Challenges, including instances of harassment,
+                discrimination and bullying, may arise and need to be
+                resolved. The Student Experience Office is a service focused on supporting students to dealing with
+                conflicts and complaints, ensuring they understand their rights and responsibilities on campus. The
+                Student Experience Office also helps
+                students understand College policies such as:
+            </p>
+            <ul>
+                <li>Student Code of Conduct</li>
+                <li>
+                    Sexual Violence Prevention and Harassment and Discrimination Prevention
+                </li>
+                <li>Grade Appeals</li>
+                <li>Academic Integrity</li>
+            </ul>
+            <p>
+                Resources on understanding academic integrity and how to avoid plagiarism and cheating can be found
+                through the Library and Learning Centres at
+                <a href="library.centennialcollege.ca/academic-integrity"
+                    target="_blank">library.centennialcollege.ca/academic-integrity</a>, including access to citation
+                guides, an online module on academic
+                integrity, and access to an online How to Cite module. All College
+                policies can be found at
+                <a href="centennialcollege.ca/policies" target="_blank">centennialcollege.ca/policies</a>. If you have
+                questions about these policies, please contact the
+                Student Experience Office
+                <a href="mailto:studentexperiencecc@centennialcollege.ca">studentexperiencecc@centennialcollege.ca</a>
+                | <span class="green">416-289-5000, ext. 2499</span>
+            </p>
+        </div>
     </div>
-</body>
+    </section>
 
-</html>
-<script type="text/javascript">
-    function checkFilter(val, regex) {
-        let breaker = -1;
-        for (let i = 0; i < val.length; i++) {
-            if (val[i].search(regex) != -1) {
-                console.log(val[i]);
-                breaker = 1;
-                break;
-            }
-        }
-        return breaker;
-    }
+    <section class="co-curricular">
+        <div class="container cc-services">
+            <div class="title-m2">
+                <h1>CO-CURRICULAR SERVICES</h1>
+            </div>
+            <br>
+            <nav class="navbar navbar-light bg-light justify-content-between">
+                <p>What are you looking for?</p>
+                <div class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Type your search activities"
+                        aria-label="Search" id="txt-search" />
+                    <button id="searchBtn"class="btn btn-outline-secondary my-2 my-sm-0"  onclick="OnSearchButtonClicked(this)">
+                        Search
+                    </button>
+                </div>
 
-    $(document).ready(function() {
+                <!-- <div id="filter-records"></div> -->
+                <div id="footer"></div>
+
+            </nav>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col sl">SERVICE LEGEND</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 asc"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('All',this)">All</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 asc"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Academic support',this)">Academic Support
+                        </div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 fs"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Financial support',this)">Financial Support
+                        </div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 gi"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Get involved',this)">Get Involved</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 hw"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Health and Wellness',this)">Health and
+                            Wellness</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 prof"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Professional',this)">Professional</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 ss"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Student space',this)">Student space</div>
+                    </div>
+                </div>
+                <div class="col" id="filter-records">
+                    <div class="row ccurricular">
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row ccurricular">
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ccurricular">
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-map-marker-alt"></i><br />
+                            <a href="">Lorem Ipson</a>
+                            <div class="smsquare">
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col"><img src="assets/images/rodape_img.png" /></div>
+                <div class="col-md-1"></div>
+                <div class="col">
+                    <ul>
+                        <li><a href="">Progress Campus</a></li>
+                        <li><a href="">Ashtonbee Campus</a></li>
+                        <li><a href="">Morningside Campus</a></li>
+                        <li><a href="">Story Arts Centre</a></li>
+                        <li><a href="">Eglinton Learning Site</a></li>
+                        <li><a href="">Downsview Campus</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="">Academic Suport</a></li>
+                        <li><a href="">Financial Suport</a></li>
+                        <li><a href="">Get Involved</a></li>
+                        <li><a href="">Health and Wellness</a></li>
+                        <li><a href="">Professional</a></li>
+                        <li><a href="">Student space</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="">Legal</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Site Map</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">416-289-5000</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col">
+                    <p>© 2020 Centennial College. All Rights Reserved.</p>
+                </div>
+                <div class="col">
+                    <div class="social-media">
+                        <div class="circle"><i class="fab fa-facebook-f"></i></div>
+                        <div class="circle"><i class="fab fa-twitter"></i></div>
+                        <div class="circle"><i class="fab fa-youtube"></i></div>
+                        <div class="circle"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="circle"><i class="fab fa-instagram"></i></div>
+                        <div class="circle"><i class="fas fa-rss"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--/Functions and scripts/-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+
+    <script type="text/javascript">
         var data = [{
             location_id: "1",
             location_name: "CCSAI",
@@ -47,100 +442,314 @@
         }, {
             location_id: "2",
             location_name: "Library",
-            location_type: "Academic",
+            location_type: "Academic support",
             location_description: "61",
             location_redirecturl: "default_profile.png",
             location_filters: ["books", "printing"]
+        }, {
+            location_id: "3",
+            location_name: "Career services & Co-operative Education",
+            location_type: "Professional",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["job", "resume"]
+        },
+        {
+            location_id: "4",
+            location_name: "IT Help Desk",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["account", "password"]
+        },
+        {
+            location_id: "5",
+            location_name: "Student Experience Office",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["learn", "community"]
+        },
+        {
+            location_id: "6",
+            location_name: "Center For Academic English",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["language", "math", "english"]
+        }, {
+            location_id: "7",
+            location_name: "Prayer Room",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["spiritual"]
+        }, {
+            location_id: "8",
+            location_name: "Book Store",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["books", "buy", "rent", "return"]
+        }, {
+            location_id: "9",
+            location_name: "Community Outreach Office",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "10",
+            location_name: "Incusive Washrooms",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["hygene"]
+        }, {
+            location_id: "11",
+            location_name: "Center For Accesible Learning and Counselling Services",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["language", "math", "english"]
+        }, {
+            location_id: "12",
+            location_name: "Appiled Research, Innovation and Entrepreneurship Services",
+            location_type: "Professional",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["business", "start-up"]
+        }, {
+            location_id: "13",
+            location_name: "Centennial Advising and Pathways Services",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "14",
+            location_name: "Life Safety and Security",
+            location_type: "Health and wellness",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["parking"]
+        }, {
+            location_id: "15",
+            location_name: "Assessment Center",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["Test", "math", "english"]
+        }, {
+            location_id: "16",
+            location_name: "The HUB(Enrollment Services)",
+            location_type: "Financial support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["fees"]
+        }, {
+            location_id: "17",
+            location_name: "International Education Center",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["admission"]
+        }, {
+            location_id: "18",
+            location_name: "Learning Services",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "19",
+            location_name: "Math Center",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["math", "learn"]
+        }, {
+            location_id: "20",
+            location_name: "The Centre for Global Citizenship Education & Inclusion - GCEI",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["community"]
+        }, {
+            location_id: "21",
+            location_name: "Food Services Outlet",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["lunch", "breakfast", "coffee"]
+        }, {
+            location_id: "22",
+            location_name: "Co-curriculur student Learnig and Development",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "23",
+            location_name: "Alumni Engagement",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["community"]
         }];
+        var activeType;
 
-        var outputInit = '<div class="row">';
-        var countInit = 1;
-        $.each(data, function(key, val) {
-            outputInit += '<div class="col-md-6 well">';
-            outputInit += '<div class="col-md-7">';
-            outputInit += "<h5>" + val.location_name + "</h5>";
-            outputInit += "</div>";
-            outputInit += "</div>";
-            if (countInit % 2 == 0) {
-                outputInit += '</div><div class="row">';
+
+        function OnLocationTypeClicked(locationType, element) {
+            let outputForType = "";
+            let countForType = 1;
+
+            if (typeof activeType != "undefined")
+                $(activeType).parent().removeClass('locationTypeSelected');
+            $(element).parent().addClass('locationTypeSelected');
+
+            if (locationType != 'All') {
+                $.each(data, function (key, val) {
+                    if (val.location_type == locationType) {
+                        if (countForType == 1) {
+                            outputForType += '<div class="row ccurricular">';
+                        }
+                        outputForType += '<div class="col">';
+                        outputForType += '<i class="fas fa-map-marker-alt"></i><br />';
+                        outputForType += '<a href="">' + val.location_name + "</a>";
+                        outputForType +=
+                            '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                        outputForType += "</div>";
+                        if (countForType % 4 == 0) {
+                            outputForType += '</div>';
+                            countForType = 1
+                        } else {
+                            countForType++;
+                        }
+                    }
+                });
+            } else {
+                $.each(data, function (key, val) {
+                    if (countForType == 1) {
+                        outputForType += '<div class="row ccurricular">';
+                    }
+                    outputForType += '<div class="col">';
+                    outputForType += '<i class="fas fa-map-marker-alt"></i><br />';
+                    outputForType += '<a href="">' + val.location_name + "</a>";
+                    outputForType +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                    outputForType += "</div>";
+                    if (countForType % 4 == 0) {
+                        countForType += '</div>';
+                        countForType = 1
+                    } else {
+                        countForType++;
+                    }
+                });
             }
-            countInit++;
-        });
+            outputForType += "</div>";
+            console.log(countForType);
+            $("#filter-records").html(outputForType);
+            activeType = element;
+        }
+        
+         
+            var output = '<div class="row">';
+            var count = 1;
 
-        outputInit += "</div>";
-        $("#filter-records").html(outputInit);
-
-        $("#txt-search").keyup(function() {
-            var searchField = $(this).val();
+            function checkFilter(val, regex) {
+                let breaker = -1;
+                for (let i = 0; i < val.length; i++) {
+                    if (val[i].search(regex) != -1) {
+                        console.log(val[i]);
+                        breaker = 1;
+                        break;
+                    }
+                }
+                return breaker;
+            }
+        function OnSearchButtonClicked(element){
+             var searchField = $('#txt-search').val();
+             var regex = new RegExp(searchField, "i");
+             console.log(searchField);
+             console.log(element);
             if (searchField === "") {
+                console.log("empty");
                 var outputInit = '<div class="row">';
                 var countInit = 1;
 
-                <<
-                << << < HEAD
-                $.each(data, function(key, val) {
-                    outputInit += '<div class="col-md-6 well">';
-                    outputInit += '<div class="col-md-7">';
-                    outputInit += "<h5>" + val.location_name + "</h5>";
-                    outputInit += "</div>";
-                    outputInit += "</div>";
-                    if (countInit % 2 == 0) {
-                        outputInit += '</div><div class="row">';
+                $.each(data, function (key, val) {
+                    if (countInit == 1) {
+                        outputInit += '<div class="row ccurricular">';
                     }
-                    countInit++;
+                    outputInit += '<div class="col">';
+                    outputInit += '<i class="fas fa-map-marker-alt"></i><br />';
+                    outputInit += '<a href="">' + val.location_name + "</a>";
+                    outputInit +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                    outputInit += "</div>";
+                    //   outputInit += "</div>"
+                    if (countInit % 4 == 0) {
+                        outputInit += '</div>';
+                        countInit = 1
+                    } else {
+                        countInit++;
+                    }
                 });
                 outputInit += "</div>";
                 $("#filter-records").html(outputInit);
                 return;
             }
 
-            var regex = new RegExp(searchField, "i");
-            var output = '<div class="row">';
-            var count = 1;
-
-            $.each(data, function(key, val) {
-                console.log(checkFilter(val.location_filters, regex));
-                if (
-                    val.location_name.search(regex) != -1 ||
-                    checkFilter(val.location_filters, regex) != -1
-                ) {
-                    output += '<div class="col-md-6 well">';
-                    output += '<div class="col-md-7">';
-                    output += "<h5>" + val.location_name + "</h5>";
-                    output += "</div>";
-                    output += "</div>";
-                    if (count % 2 == 0) {
-                        output += '</div><div class="row">';
+            $.each(data, function (key, val) {
+                if (val.location_name.search(regex) != -1 || checkFilter(val.location_filters, regex) != -1) {
+                    if (count == 1) {
+                        output += '<div class="row ccurricular">';
                     }
-                    count++;
+                    output += '<div class="col">';
+                    output += '<i class="fas fa-map-marker-alt"></i><br />';
+                    output += '<a href="">' + val.location_name + "</a>";
+                    output +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                    output += "</div>";
+                    // output += "</div>";
+                    if (count % 4 == 0) {
+                        output += '</div>';
+                        count = 1
+                    } else {
+                        count++;
+                    }
                 }
             });
             output += "</div>";
             $("#filter-records").html(output);
-        }); ===
-        === =
-        $.each(data, function(key, val) {
-            console.log(checkFilter(val.location_filters, regex));
-            if (
-                val.location_name.search(regex) != -1 ||
-                checkFilter(val.location_filters, regex) != -1
-            ) {
-                // output += '<div class="row ccurricular">';
-                output += '<div class="col">';
-                output += '<i class="fas fa - map - marker - alt"></i><br />';
-                output += '<a href="">' + val.location_name + "</a>";
-                output +=
-                    '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
-                output += "</div>";
-                // output += "</div>";
-                if (count % 2 == 0) {
-                    output += '</div><div class="row">';
-                }
-                count++;
             }
+            
+            $(document).ready(function () {
+
+            var outputInit = '';
+            var countInit = 1;
+            $.each(data, function (key, val) {
+                if (countInit == 1) {
+                    outputInit += '<div class="row ccurricular">';
+                }
+                outputInit += '<div class="col">';
+                outputInit += '<i class="fas fa-map-marker-alt"></i><br />';
+                outputInit += '<a href="">' + val.location_name + "</a>";
+                outputInit +=
+                    '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                outputInit += "</div>";
+                if (countInit % 4 == 0) {
+                    outputInit += '</div>';
+                    countInit = 1
+                } else {
+                    countInit++;
+                }
+            });
+            outputInit += "</div>";
+            $("#filter-records").html(outputInit);
         });
-        output += "</div>";
-        $("#filter-records").html(output); >>>
-        >>> > f7685c25c81b7df1f862338d34f7e243ec0155d0
-    });
-</script>
+    </script>
+</body>
+
+</html>
