@@ -1,8 +1,8 @@
 ﻿// Create the canvas for the game to display
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
-canvas.width = 600;
-canvas.height = 480;
+canvas.width = 599;
+canvas.height = 475;
 canvas.setAttribute("class", "game-canvas");
 document.body.appendChild(canvas);
 
