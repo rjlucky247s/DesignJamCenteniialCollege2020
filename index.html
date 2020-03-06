@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-light justify-content-end">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/images/centennial_college_logo.png" /></a>
+            <a class="navbar-brand" href="index.html"><img src="assets/images/centennial_college_logo.png" /></a>
             <button class="disablebtn ml-auto mr-1"></button>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
@@ -177,187 +177,114 @@
       </div>
     </section>
 
- <section class="co-curricular">
-      <div class="container cc-services">
-        <div class="title-m2">
-          <h1>CO-CURRICULAR SERVICES</h1>
-        </div>
-        <br>
-        <nav class="navbar navbar-light bg-light justify-content-between">
-            <p>What are you looking for?</p>
-                            <form class="form-inline" role="form">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Type your search activities" aria-label="Search" id="txt-search" />
-                                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
-                Search
-              </button>
-                            </form>
+     <section class="co-curricular">
+        <div class="container cc-services">
+            <div class="title-m2">
+                <h1>CO-CURRICULAR SERVICES</h1>
+            </div>
+            <br>
+            <nav class="navbar navbar-light bg-light justify-content-between">
+                <p>What are you looking for?</p>
+                <div class="form-inline">
+                    <input class="form-control mr-bg-2" type="search" placeholder="Type your search activities"
+                        aria-label="Search" id="txt-search" style="width: 500px;" />
+                    <button id="searchBtn"class="btn btn-outline-secondary my-2 my-sm-0"  onclick="OnSearchButtonClicked(this)">
+                        Search
+                    </button>
+                </div>
 
-                            <div id="filter-records"></div>
-                            <div id="footer"></div>
+                <!-- <div id="filter-records"></div> -->
+                <div id="footer"></div>
 
-                            </nav>
-                            <br>
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="row">
-                                        <div class="col sl">SERVICE LEGEND</div>
-                                    </div>
-                                    <div class="row title-service">
-                                        <div class="col-1 asc"><input type="checkbox" /></div>
-                                        <div class="col as">Academic Suport</div>
-                                    </div>
-                                    <div class="row title-service">
-                                        <div class="col-1 fs"><input type="checkbox" /></div>
-                                        <div class="col as">Financial Suport</div>
-                                    </div>
-                                    <div class="row title-service">
-                                        <div class="col-1 gi"><input type="checkbox" /></div>
-                                        <div class="col as">Get Involved</div>
-                                    </div>
-                                    <div class="row title-service">
-                                        <div class="col-1 hw"><input type="checkbox" /></div>
-                                        <div class="col as">Health and Wellness</div>
-                                    </div>
-                                    <div class="row title-service">
-                                        <div class="col-1 prof"><input type="checkbox" /></div>
-                                        <div class="col as">Professional</div>
-                                    </div>
-                                    <div class="row title-service">
-                                        <div class="col-1 ss"><input type="checkbox" /></div>
-                                        <div class="col as">Student space</div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="row ccurricular">
-                                        <div class="col">
-                                            <i class="fas fa-map-marker-alt"></i><br />
-                                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
+            </nav>
+            <br>
+            <div class="row">
+
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col sl">SERVICE LEGEND</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 asc" ><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('All',this)">All</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 asc"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Academic support',this)">Academic Support
                         </div>
                     </div>
+                    <div class="row title-service">
+                        <div class="col-1 fs"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Financial support',this)">Financial Support
+                        </div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 gi"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Get involved',this)">Get Involved</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 hw"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Health and Wellness',this)">Health and
+                            Wellness</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 prof"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Professional',this)">Professional</div>
+                    </div>
+                    <div class="row title-service">
+                        <div class="col-1 ss"><input type="checkbox" /></div>
+                        <div class="col as" onclick="OnLocationTypeClicked('Student space',this)">Student space</div>
+                    </div>
+                </div>
+                
+                <div class="col" id="filter-records">
 
                     <div class="row ccurricular">
                         <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
+                            <div class="title-search">
+                                <i class="fas fa-map-marker-alt"></i><br />
+                                <a href="">Lorem Ipson</a>
                         </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
+                        <div class="smsquare">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <span class="s3"></span>
+                            <span class="s4"></span>
                         </div>
                     </div>
-
-                    <div class="row ccurricular">
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
+                    <div class="col">
+                        <i class="fas fa-map-marker-alt"></i><br />
+                        <a href="">Lorem Ipson</a>
+                        <div class="smsquare">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <span class="s3"></span>
+                            <span class="s4"></span>
                         </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-map-marker-alt"></i><br />
+                        <a href="">Lorem Ipson</a>
+                        <div class="smsquare">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <span class="s3"></span>
+                            <span class="s4"></span>
                         </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-map-marker-alt"></i><br />
-                            <a href="">Lorem Ipson</a>
-                            <div class="smsquare">
-                                <span class="s1"></span>
-                                <span class="s2"></span>
-                                <span class="s3"></span>
-                                <span class="s4"></span>
-                            </div>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-map-marker-alt"></i><br />
+                        <a href="">Lorem Ipson</a>
+                        <div class="smsquare">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <span class="s3"></span>
+                            <span class="s4"></span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -423,86 +350,320 @@
     <script src="assets/js/functions.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            var data = [{
-                location_id: "1",
-                location_name: "CCSAI",
-                location_type: "Health and Wellness",
-                location_description: "61",
-                location_redirecturl: "default_profile.png",
-                location_filters: ["play", "gym", "lunch"]
-            }, {
-                location_id: "2",
-                location_name: "Library",
-                location_type: "Academic",
-                location_description: "61",
-                location_redirecturl: "default_profile.png",
-                location_filters: ["books", "printing"]
-            }];
+        var data = [{
+            location_id: "1",
+            location_name: "CCSAI",
+            location_type: "Health and Wellness",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["play", "gym", "lunch"]
+        }, {
+            location_id: "2",
+            location_name: "Library",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["books", "printing"]
+        }, {
+            location_id: "3",
+            location_name: "Career services & Co-operative Education",
+            location_type: "Professional",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["job", "resume"]
+        }, {
+            location_id: "4",
+            location_name: "IT Help Desk",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["account", "password"]
+        }, {
+            location_id: "5",
+            location_name: "Student Experience Office",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["learn", "community"]
+        }, {
+            location_id: "6",
+            location_name: "Center For Academic English",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["language", "math", "english"]
+        }, {
+            location_id: "7",
+            location_name: "Prayer Room",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["spiritual"]
+        }, {
+            location_id: "8",
+            location_name: "Book Store",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["books", "buy", "rent", "return"]
+        }, {
+            location_id: "9",
+            location_name: "Community Outreach Office",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "10",
+            location_name: "Incusive Washrooms",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["hygene"]
+        }, {
+            location_id: "11",
+            location_name: "Center For Accesible Learning and Counselling Services",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["language", "math", "english"]
+        }, {
+            location_id: "12",
+            location_name: "Appiled Research, Innovation and Entrepreneurship Services",
+            location_type: "Professional",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["business", "start-up"]
+        }, {
+            location_id: "13",
+            location_name: "Centennial Advising and Pathways Services",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "14",
+            location_name: "Life Safety and Security",
+            location_type: "Health and wellness",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["parking"]
+        }, {
+            location_id: "15",
+            location_name: "Assessment Center",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["Test", "math", "english"]
+        }, {
+            location_id: "16",
+            location_name: "The HUB(Enrollment Services)",
+            location_type: "Financial support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["fees"]
+        }, {
+            location_id: "17",
+            location_name: "International Education Center",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["admission"]
+        }, {
+            location_id: "18",
+            location_name: "Learning Services",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "19",
+            location_name: "Math Center",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["math", "learn"]
+        }, {
+            location_id: "20",
+            location_name: "The Centre for Global Citizenship Education & Inclusion - GCEI",
+            location_type: "Academic support",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["community"]
+        }, {
+            location_id: "21",
+            location_name: "Food Services Outlet",
+            location_type: "Student space",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["lunch", "breakfast", "coffee"]
+        }, {
+            location_id: "22",
+            location_name: "Co-curriculur student Learnig and Development",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["education"]
+        }, {
+            location_id: "23",
+            location_name: "Alumni Engagement",
+            location_type: "Get involved",
+            location_description: "61",
+            location_redirecturl: "default_profile.png",
+            location_filters: ["community"]
+        }];
+        var activeType;
 
-            var outputInit = '<div class="row">';
+
+        function OnLocationTypeClicked(locationType, element) {
+            let outputForType = "";
+            let countForType = 1;
+
+            if (typeof activeType != "undefined")
+                $(activeType).parent().removeClass('locationTypeSelected');
+            $(element).parent().addClass('locationTypeSelected');
+
+            if (locationType != 'All') {
+                $.each(data, function(key, val) {
+                    if (val.location_type == locationType) {
+                        if (countForType == 1) {
+                            outputForType += '<div class="row ccurricular">';
+                        }
+                        outputForType += '<div class="col-3">';
+                        outputForType += '<i class="fas fa-map-marker-alt"></i><br />';
+                        outputForType += '<a href="">' + val.location_name + "</a>";
+                        outputForType +=
+                            '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                        outputForType += "</div>";
+                        if (countForType % 4 == 0) {
+                            outputForType += '</div>';
+                            countForType = 1
+                        } else {
+                            countForType++;
+                        }
+                    }
+                });
+            } else {
+                $.each(data, function(key, val) {
+                    if (countForType == 1) {
+                        outputForType += '<div class="row ccurricular">';
+                    }
+                    outputForType += '<div class="col-3">';
+                    outputForType += '<i class="fas fa-map-marker-alt"></i><br />';
+                    outputForType += '<a href="">' + val.location_name + "</a>";
+                    outputForType +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                    outputForType += "</div>";
+                    if (countForType % 4 == 0) {
+                        countForType += '</div>';
+                        countForType = 1
+                    } else {
+                        countForType++;
+                    }
+                });
+            }
+            outputForType += "</div>";
+            console.log(countForType);
+            $("#filter-records").html(outputForType);
+            activeType = element;
+        }
+
+
+        var output = '<div class="row">';
+        var count = 1;
+
+        function checkFilter(val, regex) {
+            let breaker = -1;
+            for (let i = 0; i < val.length; i++) {
+                if (val[i].search(regex) != -1) {
+                    console.log(val[i]);
+                    breaker = 1;
+                    break;
+                }
+            }
+            return breaker;
+        }
+
+        function OnSearchButtonClicked(element) {
+            var searchField = $('#txt-search').val();
+            var regex = new RegExp(searchField, "i");
+            console.log(searchField);
+            console.log(element);
+            if (searchField === "") {
+                console.log("empty");
+                var outputInit = '<div class="row">';
+                var countInit = 1;
+
+                $.each(data, function(key, val) {
+                    if (countInit == 1) {
+                        outputInit += '<div class="row ccurricular">';
+                    }
+                    outputInit += '<div class="col-3">';
+                    outputInit += '<i class="fas fa-map-marker-alt"></i><br />';
+                    outputInit += '<a href="">' + val.location_name + "</a>";
+                    outputInit +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                    outputInit += "</div>";
+                    //   outputInit += "</div>"
+                    if (countInit % 4 == 0) {
+                        outputInit += '</div>';
+                        countInit = 1
+                    } else {
+                        countInit++;
+                    }
+                });
+                outputInit += "</div>";
+                $("#filter-records").html(outputInit);
+                return;
+            }
+
+            $.each(data, function(key, val) {
+                if (val.location_name.search(regex) != -1 || checkFilter(val.location_filters, regex) != -1) {
+                    if (count == 1) {
+                        output += '<div class="row ccurricular">';
+                    }
+                    output += '<div class="col-3">';
+                    output += '<i class="fas fa-map-marker-alt"></i><br />';
+                    output += '<a href="">' + val.location_name + "</a>";
+                    output +=
+                        '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                    output += "</div>";
+                    // output += "</div>";
+                    if (count % 4 == 0) {
+                        output += '</div>';
+                        count = 1
+                    } else {
+                        count++;
+                    }
+                }
+            });
+            output += "</div>";
+            $("#filter-records").html(output);
+        }
+
+        $(document).ready(function() {
+
+            var outputInit = '';
             var countInit = 1;
             $.each(data, function(key, val) {
-                outputInit += '<div class="col-md-6 well">';
-                outputInit += '<div class="col-md-7">';
-                outputInit += "<h5>" + val.location_name + "</h5>";
-                outputInit += "</div>";
-                outputInit += "</div>";
-                if (countInit % 2 == 0) {
-                    outputInit += '</div><div class="row">';
+                if (countInit == 1) {
+                    outputInit += '<div class="row ccurricular">';
                 }
-                countInit++;
+                outputInit += '<div class="col-3">';
+                outputInit += '<i class="fas fa-map-marker-alt"></i><br />';
+                outputInit += '<a href="">' + val.location_name + "</a>";
+                outputInit +=
+                    '<div class="smsquare"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>';
+                outputInit += "</div>";
+                if (countInit % 4 == 0) {
+                    outputInit += '</div>';
+                    countInit = 1
+                } else {
+                    countInit++;
+                }
             });
             outputInit += "</div>";
             $("#filter-records").html(outputInit);
-
-            $("#txt-search").keyup(function() {
-                var searchField = $(this).val();
-                if (searchField === "") {
-                    var outputInit = '<div class="row">';
-                    var countInit = 1;
-
-                    $.each(data, function(key, val) {
-                        outputInit += '<div class="col-md-6 well">';
-                        outputInit += '<div class="col-md-7">';
-                        outputInit += "<h5>" + val.location_name + "</h5>";
-                        outputInit += "</div>";
-                        outputInit += "</div>";
-                        if (countInit % 2 == 0) {
-                            outputInit += '</div><div class="row">';
-                        }
-                        countInit++;
-                    });
-                    outputInit += "</div>";
-                    $("#filter-records").html(outputInit);
-                    return;
-                }
-
-                var regex = new RegExp(searchField, "i");
-                var output = '<div class="row">';
-                var count = 1;
-
-                function checkFilter(val, regex) {
-                    val.location_filters.forEach((element) => {
-                        if (element.search(regex) != -1) return 1;
-                    });
-                }
-                $.each(data, function(key, val) {
-                    if (val.location_name.search(regex) != -1) {
-                        output += '<div class="col-md-6 well">';
-                        output += '<div class="col-md-7">';
-                        output += "<h5>" + val.location_name + "</h5>";
-                        output += "</div>";
-                        output += "</div>";
-                        if (count % 2 == 0) {
-                            output += '</div><div class="row">';
-                        }
-                        count++;
-                    }
-                });
-                output += "</div>";
-                $("#filter-records").html(output);
-            });
         });
     </script>
 </body>
